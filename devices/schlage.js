@@ -10,7 +10,9 @@ module.exports = [
         model: 'BE468',
         vendor: 'Schlage',
         description: 'Connect smart deadbolt',
-        fromZigbee: [fz.lock, fz.lock_operation_event, fz.battery, fz.lock_pin_code_response, fz.lock_programming_event],
+        fromZigbee: [fz.lock, fz.lock_operation_event, fz.battery,
+            fz.lock_pin_code_response, fz.lock_programming_event,
+            fz.lock_user_status_response],
         toZigbee: [tz.lock, tz.pincode_lock],
         meta: {pinCodeCount: 30},
         configure: async (device, coordinatorEndpoint, logger) => {
